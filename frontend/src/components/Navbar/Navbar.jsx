@@ -3,7 +3,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import logo from "../../assets/logo.svg";
 import "./Navbar.css";
-import Button from "../ui/Button/button";
+import Button from "../ui/Button/Button";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
