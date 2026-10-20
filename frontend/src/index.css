@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  font-family: "Mona Sans", sans-serif;
+
+  background-color: black;
+  background-image: url("./assets/pattern.png");
+
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+
+  min-height: 100vh;
+}

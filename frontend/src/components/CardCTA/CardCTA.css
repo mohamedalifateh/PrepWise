@@ -1,0 +1,168 @@
+.card-cta {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 50px;
+
+    width: 100%;
+
+    margin: 120px auto 50px;
+
+    padding: 50px;
+
+    border-radius: 30px;
+
+    background: linear-gradient(
+        180deg,
+        #171532,
+        #08090D
+    );
+
+    overflow: hidden;
+}
+
+/* Left Content */
+
+.card-cta-content {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 25px;
+
+    max-width: 600px;
+}
+
+.card-cta-content h2 {
+
+    color: white;
+
+    font-size: 42px;
+
+    line-height: 1.25;
+
+    font-weight: 700;
+}
+
+.card-cta-content p {
+
+    color: #D6E0FF;
+
+    font-size: 20px;
+
+    line-height: 1.7;
+}
+
+/* Button */
+
+.btn-primary {
+
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: fit-content;
+
+    padding: 14px 28px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    background: #CAC5FE;
+
+    color: #111;
+
+    font-weight: 700;
+
+    transition: .3s;
+}
+
+.btn-primary:hover {
+
+    background: #B8B0FF;
+
+    transform: translateY(-2px);
+}
+
+/* Image */
+
+.card-cta-image img {
+
+    width: 380px;
+
+    max-width: 100%;
+
+    display: block;
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width:992px){
+
+    .card-cta{
+
+        padding:40px;
+
+        gap:30px;
+    }
+
+    .card-cta-content h2{
+
+        font-size:34px;
+    }
+
+    .card-cta-image img{
+
+        width:280px;
+    }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width:768px){
+
+    .card-cta{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:30px 20px;
+    }
+
+    .card-cta-content{
+
+        align-items:center;
+    }
+
+    .card-cta-content h2{
+
+        font-size:30px;
+    }
+
+    .card-cta-content p{
+
+        font-size:18px;
+    }
+
+    .btn-primary{
+
+        width:100%;
+        max-width:300px;
+    }
+
+    .card-cta-image{
+
+        display:none;
+    }
+
+}

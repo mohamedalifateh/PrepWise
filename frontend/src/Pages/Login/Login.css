@@ -1,0 +1,342 @@
+/* =========================================
+   LOGIN PAGE (Outer Wrapper)
+========================================= */
+
+.auth-page {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 110px 40px 40px 40px;
+  box-sizing: border-box;
+}
+
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 80px;
+
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   ROBOT SECTION (ease-in-out animation)
+========================================= */
+
+.robot-section {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.robot-image {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+
+  animation: robotJump 2.5s ease-in-out infinite;
+}
+
+@keyframes robotJump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   CARD CONTAINER (Only this flips!)
+========================================= */
+
+.auth-card-container {
+  width: 420px;
+  flex-shrink: 0;
+
+  /* 3D Depth perspective focused on the card */
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+/* Card Animation Keyframes */
+.auth-card-container.turning-in {
+  animation: cardFlipIn 0.1s ease-out forwards;
+}
+
+.auth-card-container.turning-out {
+  animation: cardFlipOut 0.1s ease-in forwards;
+}
+
+@keyframes cardFlipIn {
+  0% {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes cardFlipOut {
+  0% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotateY(-90deg);
+  }
+}
+
+.auth-card {
+  width: 100%;
+  height: auto;
+}
+
+.auth-side {
+  width: 100%;
+
+  padding: 36px 32px;
+  box-sizing: border-box;
+
+  background: rgba(13, 14, 20, 0.96);
+
+  border: 1px solid #292b35;
+
+  border-radius: 18px;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =========================================
+   LOGO & HEADINGS
+========================================= */
+
+.auth-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 12px;
+}
+
+.auth-logo img {
+  width: 38px;
+  height: 38px;
+}
+
+.auth-content h1 {
+  margin: 0;
+
+  text-align: center;
+
+  color: white;
+
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.auth-content h1 span {
+  color: #cac5fe;
+}
+
+.auth-description {
+  margin-top: 8px;
+  margin-bottom: 25px;
+
+  text-align: center;
+
+  color: #777b91;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   FORM CONTROLS
+========================================= */
+
+.auth-content label {
+  display: block;
+
+  margin-top: 14px;
+  margin-bottom: 6px;
+
+  color: #c9cbd8;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.auth-content input {
+  width: 100%;
+  height: 40px;
+
+  padding: 0 12px;
+  box-sizing: border-box;
+
+  background: #15161c;
+
+  border: 1px solid #30323b;
+
+  border-radius: 6px;
+
+  outline: none;
+
+  color: white;
+
+  font-family: inherit;
+  font-size: 12px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.auth-content input:focus {
+  border-color: #7650ff;
+
+  box-shadow: 0 0 0 2px rgba(118, 80, 255, 0.12);
+}
+
+.auth-content input::placeholder {
+  color: #666a7b;
+}
+
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.submit-btn {
+  width: 100%;
+  height: 42px;
+
+  margin-top: 24px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  /* background: linear-gradient(135deg, #7042ff, #956cff); */
+  background: #cac5fe;
+
+  color: #111;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-1px);
+
+  box-shadow: 0 8px 20px rgba(112, 66, 255, 0.35);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   BOTTOM TEXT
+========================================= */
+
+.bottom-text {
+  margin-top: 20px;
+
+  text-align: center;
+
+  color: #777b91;
+
+  font-size: 12px;
+}
+
+.bottom-text button {
+  margin-left: 6px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #a17cff;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.bottom-text button:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   RESPONSIVE BREAKPOINTS
+========================================= */
+
+@media (max-width: 1000px) {
+  .auth-container {
+    gap: 40px;
+  }
+
+  .robot-image {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 750px) {
+  .auth-page {
+    padding: 100px 20px 30px 20px;
+  }
+
+  .robot-section {
+    display: none;
+  }
+
+  .auth-card-container {
+    width: 100%;
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 450px) {
+  .auth-page {
+    padding: 85px 15px 20px 15px;
+  }
+
+  .auth-side {
+    padding: 28px 20px;
+  }
+
+  .auth-content h1 {
+    font-size: 22px;
+  }
+}

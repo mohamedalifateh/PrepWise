@@ -1,0 +1,7 @@
+.home {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 10px; /* Prevents the fixed navbar from covering the content */
+    padding-inline: 40px;
+    /* background-color: #020408; */
+}
